@@ -2,17 +2,19 @@
 
     use Symfony\Component\HttpFoundation\Request;
 
-    require_once __DIR__.'/../vendor/autoload.php';
+    require_once __DIR__ . '/../vendor/autoload.php';
 
     $app = new Silex\Application();
 
-// ... definitions
+    $app->register(new Silex\Provider\TwigServiceProvider(), [
+        'twig.path' => __DIR__ . '/../views',
+    ]);
 
     /* Routes */
 
-    $app->get('/', function ($id) {
-        echo '<h1>Hello World!</h1>';
-        echo '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae exercitationem, explicabo, in iste laudantium necessitatibus placeat quae quasi quis quisquam quod reiciendis, repellat sint sit sunt ullam voluptas! Expedita, odio?</h1>';
+    // Main page
+    $app->get('/', function () use ($app) {
+        return $app['twig']->render('index.twig');
     });
 
     $app['debug'] = true;
