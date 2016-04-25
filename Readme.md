@@ -16,3 +16,9 @@ This is my first Hello World E-shop
 ```
     npm i
 ```
+
+3. Build front-end
+
+```
+    gulp
+```

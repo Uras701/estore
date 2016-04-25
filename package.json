@@ -1,6 +1,7 @@
 {
   "private": true,
   "devDependencies": {
+    "bootstrap": "^3.3.6",
     "gulp": "^3.9.1"
   },
   "dependencies": {
