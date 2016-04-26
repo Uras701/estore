@@ -14,4 +14,5 @@ elixir.config.assetsPath = './node_modules/bootstrap/dist';
 elixir(function(mix) {
   mix.styles(['bootstrap.min.css', 'bootstrap-theme.min.css']);
   mix.scripts(['bootstrap.min.js']);
+  mix.version('css/all.css');
 });
