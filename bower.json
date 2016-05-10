@@ -1,0 +1,27 @@
+{
+  "name": "estore",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Yuri Gaidoba <ypa.indiv@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Uras701/estore",
+  "moduleType": [
+    "es6",
+    "globals",
+    "node",
+    "yui"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.6"
+  }
+}

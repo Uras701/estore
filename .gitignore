@@ -16,3 +16,5 @@
 !var/sessions/.gitkeep
 !var/SymfonyRequirements.php
 /web/bundles/
+bower_components
+/web/assets/*
