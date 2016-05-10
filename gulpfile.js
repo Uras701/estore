@@ -15,7 +15,8 @@ var gulp = require('gulp'),
 gulp.task('styles', function() {
   return gulp.src([
     'bower_components/bootstrap/dist/css/bootstrap.css',
-    'bower_components/bootstrap/dist/css/bootstrap-theme.css'
+    'bower_components/bootstrap/dist/css/bootstrap-theme.css',
+    'src/front-end/css/*.css'
   ], { style: 'expanded' })
     .pipe(autoprefixer('last 2 version'))
     .pipe(concat('app.css'))
@@ -29,7 +30,8 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
   return gulp.src([
       'bower_components/jquery/dist/jquery.js',
-      'bower_components/bootstrap/dist/js/bootstrap.js'
+      'bower_components/bootstrap/dist/js/bootstrap.js',
+      'bower_components/holderjs/holder.js'
   ])
     .pipe(concat('main.js'))
     .pipe(gulp.dest('web/assets/js'))
