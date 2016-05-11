@@ -29,3 +29,14 @@ Project build with Symfony 3 framework
         gulp
     ```
     
+5. Run database migrations
+    ```
+        php bin/console doctrine:migrations:migrate -n
+    ```
+    
+6. Optionally load data fixtures
+    ```
+        php bin/console doctrine:fixtures:load
+    ```
+    
+    
