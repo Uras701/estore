@@ -1,7 +1,7 @@
 This is my first Hello World E-shop
 ===================================
 
-# Project build with Silex framework
+Project build with Symfony 3 framework
 
 ### Project installation steps
 
@@ -11,13 +11,19 @@ This is my first Hello World E-shop
         composer install
     ```
 
-2. Install npm dependencies
+2. Install bower dependencies
+
+    ```
+        bower i
+    ```
+
+3. Install npm dependencies
 
     ```
         npm i
     ```
 
-3. Build front-end
+4. Build front-end
 
     ```
         gulp
