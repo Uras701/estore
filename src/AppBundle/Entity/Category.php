@@ -3,6 +3,8 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Gedmo\Translatable\Translatable;
 
 /**
  * Category
@@ -10,7 +12,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="category")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\CategoryRepository")
  */
-class Category
+class Category implements
+    Translatable
 {
     /**
      * @var int
@@ -24,10 +27,18 @@ class Category
     /**
      * @var string
      *
+     * @Gedmo\Translatable
      * @ORM\Column(name="name", type="string", length=25, unique=true)
      */
     private $name;
 
+    /**
+     * @Gedmo\Locale
+     * Used locale to override Translation listener`s locale
+     * this is not a mapped field of entity metadata, just a simple property
+     * and it is not necessary because globally locale can be set in listener
+     */
+    private $locale;
 
     /**
      * Get id
@@ -61,6 +72,18 @@ class Category
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * @param $locale
+     *
+     * @return $this
+     */
+    public function setTranslatableLocale($locale)
+    {
+        $this->locale = $locale;
+
+        return $this;
     }
 }
 

@@ -28,9 +28,10 @@ class LoadCategoryData implements
         $populator->addEntity(Category::class,
             100,
             [
-                'name' => function () use ($faker) {
+                'name'               => function () use ($faker) {
                     return trim($faker->unique()->text(20), '.,');
                 },
+                'translatableLocale' => 'en',
             ]);
 
         $populator->execute();
