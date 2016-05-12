@@ -41,6 +41,13 @@ class Category implements
     private $locale;
 
     /**
+     * @Gedmo\Translatable
+     * @Gedmo\Slug(fields={"name"})
+     * @ORM\Column(name="slug", type="string", length=255, unique=true)
+     */
+    private $slug;
+
+    /**
      * Get id
      *
      * @return int
@@ -84,6 +91,14 @@ class Category implements
         $this->locale = $locale;
 
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }
 

@@ -31,6 +31,7 @@ class LoadCategoryData implements
                 'name'               => function () use ($faker) {
                     return trim($faker->unique()->text(20), '.,');
                 },
+                'slug'               => null,
                 'translatableLocale' => 'en',
             ]);
 

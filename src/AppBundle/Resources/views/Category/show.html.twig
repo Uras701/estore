@@ -1,0 +1,22 @@
+{% extends "AppBundle::base.html.twig" %}
+
+{% block title %}AppBundle:Category:show{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Welcome to the Category:show page</h1>
+        <div class="panel panel-primary">
+            <div class="panel-heading">{{ category.name }}</div>
+            <div class="panel-body">
+                <dl class="dl-horizontal">
+                    <dt>id</dt>
+                    <dd>{{ category.id }}</dd>
+                    <dt>name</dt>
+                    <dd>{{ category.name }}</dd>
+                    <dt>slug</dt>
+                    <dd>{{ category.slug }}</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+{% endblock %}
