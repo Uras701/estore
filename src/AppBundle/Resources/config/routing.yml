@@ -17,3 +17,11 @@ example:
   path: /example
   methods: GET
   defaults: { _controller: AppBundle:Home:example }
+
+categories-index:
+  path:     /categories
+  defaults: { _controller: AppBundle:Category:index }
+
+categories-show:
+  path:     /categories/{slug}
+  defaults: { _controller: AppBundle:Category:show }
